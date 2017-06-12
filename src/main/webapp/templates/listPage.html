@@ -1,0 +1,36 @@
+<style>
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 5px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+</style>
+
+<div ng-controller="getAllBooksController">
+	<!-- 	I have no better idea for ng-if conditions -->
+	<strong ng-if="!bookList.length">No records</strong>
+	<div ng-if="bookList.length">
+		<table>
+			<tr>
+				<th>author</th>
+				<th>title</th>
+				<th>ISBN</th>
+			</tr>
+			<tr ng-repeat="book in bookList">
+				<td>{{book.author}}</td>
+				<td>{{book.title}}</td>
+				<td>{{book.isbn}}</td>
+			</tr>
+		</table>
+	</div>
+	<a href="#/newRecord">Add new record</a>
+</div>

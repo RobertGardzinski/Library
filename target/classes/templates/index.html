@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="scripts/router.js"></script>
+<script src="scripts/getAllBooks.js"></script>
+<script src="scripts/formSubmitController.js"></script>
+<script src="scripts/startsWithA.js"></script>
+
+<body ng-app="myRouteApp"
+	style="width: 90%; margin-left: auto; margin-right: auto;">
+	<h1>
+		<a href="#/">LIBRARY</a>
+	</h1>
+	<div style="padding-bottom: 10px">
+		<a href="#listPage">List Page</a> | <a href="#newRecord">New
+			Record</a>
+	</div>
+	<div class="ng-view" style="padding-top: 10px"></div>
+</body>
+</html>

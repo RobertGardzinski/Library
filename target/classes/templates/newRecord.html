@@ -1,0 +1,25 @@
+<form data-ng-submit="submit()"
+	data-ng-controller="formSubmitController" name="bookForm">
+	<p>Author:</p>
+	<p>
+		<input type="text" data-ng-model="author" name="inputAuthor"
+			starts-with-a required /> <span style="color: red"
+			ng-show="bookForm.inputAuthor.$invalid">Forename or surname
+			should start from letter 'A'</span>
+	</p>
+	<p>Title:</p>
+	<p>
+		<input type="text" data-ng-model="title" name="inputTitle"
+			required /> <span style="color: red"
+			ng-show="bookForm.inputTitle.$dirty && bookForm.inputTitle.$invalid">
+		</span> <span style="color: red"
+			ng-show="bookForm.inputTitle.$error.required">Title is
+			required.</span>
+	</p>
+	<p>ISBN:</p>
+	<p>
+		<input type="text" data-ng-model="isbn" name="inputIsbn" />
+	</p>
+	<input type="submit" id="submit" value="Add"
+		ng-disabled="bookForm.inputAuthor.$invalid || bookForm.inputTitle.$invalid" />
+</form>
